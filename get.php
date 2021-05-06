@@ -4,6 +4,11 @@
 error_reporting(0);set_time_limit(0);ini_set("memory_limit","-1");
 ini_set('user_agent', 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1;)');//UA設定
 
+//clearstatcache();
+error_reporting(0);set_time_limit(0);ini_set("memory_limit","-1");
+ini_set('user_agent', 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1;)');//UA設定
+//mb_language("ja");mb_internal_encoding("UTF-8");mb_http_output("UTF-8");mb_regex_encoding("UTF-8");
+
 #############################################################################################################################
 
 $starttime=time();
@@ -53,6 +58,7 @@ $a=explode('"',$x);
 if($y[0]=="    var message "){
 $date=explode(":",$z[6]);
 $date=str_replace('"',"",$date[1]);}
+//if($date==""){continue;}
 
 //namestat
 if($a[3]=="table table-striped table-bordered tbl"){$flag=1;}
